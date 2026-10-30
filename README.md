@@ -58,6 +58,7 @@ Vercel → Project → Settings → Environment Variables, then redeploy.
 
 - Name, email, phone, photo, social links: `src/data/portfolioData.js`
 - Award photos: `src/award/award1` and `src/award/award2`
+- Project detail pages: `public/htmlpage/*.html` (must stay inside `public/` so Vercel includes them)
 - Section spacing and width: `.section-wrapper` in `src/styles/global.css`
 - Award card layout: the `<style>` block in `src/components/Awards.jsx`
 - Profile photo zoom: `src/components/Hero.jsx` and `.avatar-modal` in `src/styles/components.css`
@@ -70,5 +71,6 @@ src/
 ├── pages/        Home, ProjectDetail
 ├── data/         portfolioData.js
 ├── styles/       global.css, components.css
-└── award/        award photos
+├── award/        award photos
+└── (public/htmlpage  static project pages opened by the Projects cards)
 ```

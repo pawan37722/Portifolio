@@ -14,10 +14,26 @@ export const social = {
   github:   'https://github.com/pawan37722',
   leetcode: 'https://leetcode.com/u/P_a_w_a_n_K_r/',
 }
+
+//LeetCode Stats
 export const leetcodeStats = {
   problems: env.VITE_LEETCODE_PROBLEMS || '1260+',
   rating:   env.VITE_LEETCODE_RATING   || '1846',
 }
+//Projects
+// const parseProject = (n) => ({
+//   id:        n,
+//   title:     env[`VITE_PROJECT${n}_TITLE`]      || `Project ${n}`,
+//   fullTitle: env[`VITE_PROJECT${n}_FULL_TITLE`]  || `Project ${n}`,
+//   github:    env[`VITE_PROJECT${n}_GITHUB`]      || '#',
+//   demo:      env[`VITE_PROJECT${n}_DEMO`]        || '#',
+//   desc:      env[`VITE_PROJECT${n}_DESC`]        || '',
+//   tech:      (env[`VITE_PROJECT${n}_TECH`] || '').split(',').map(t => t.trim()).filter(Boolean),
+// })
+
+// export const projects = [1, 2, 3, 4].map(parseProject)
+
+// Projects
 export const projects = [
   {
     id: 1,

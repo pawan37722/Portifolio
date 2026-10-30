@@ -1,6 +1,10 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+/**
+ * After navigating to "/" with a hash (e.g. "/#projects"),
+ * smoothly scrolls to the matching element.
+ */
 export default function useScrollToHash() {
   const { hash } = useLocation()
 

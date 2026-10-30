@@ -3,14 +3,14 @@ import { GithubIcon, ExternalIcon } from '../assets/icons'
 export const projects = [
   {
     title: 'AI coding Assistant',
-    page: './htmlpage/ai.html',
+    page: '/htmlpage/ai.html',
     github: 'https://github.com/pawan37722/AI-Based-Student-Performance-Tracker-Ranking-System',
     desc: 'If your coding assistant like cursor Token gets exosted generate a free API Key with groq and continue you coding',
     tech: ['JavaScript', 'Node.js', 'Groq'],
   },
   {
     title: 'Secure Jio Tag Application',
-    page: './htmlpage/jio-tag.html',
+    page: '/htmlpage/jio-tag.html',
     github: 'https://github.com/pawan37722/-Secure-Media-Based-Project-Verification-System',
     demo: 'https://media-metadata.vercel.app/',
     desc: 'Create a URL of your Photo/Video with uneditable date time and location',
@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     title: 'Automated API Testing Tool',
-    page: './htmlpage/api.html',
+    page: '/htmlpage/api.html',
     github: 'https://github.com/pawan37722/Improved-Version-Of-Postman-API-Testing-Automation',
     demo: 'https://api-testing-automation.vercel.app/',
     desc: 'Cheack Multiple API Request and automatically verify the response and the expected output',
@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     title: 'Memory capbility Testing',
-    page: 'htmlpage/memory.html',
+    page: '/htmlpage/memory.html',
     github: 'https://github.com/pawan37722/Memory-Checking-Game',
     demo: 'https://memory-checking-game.vercel.app/',
     desc: 'chech you remembering capability by playing a simple game and get your score',
