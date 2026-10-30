@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     title: 'Memory capbility Testing',
-    page: './htmlpage/memory.html',
+    page: 'htmlpage/memory.html',
     github: 'https://github.com/pawan37722/Memory-Checking-Game',
     demo: 'https://memory-checking-game.vercel.app/',
     desc: 'chech you remembering capability by playing a simple game and get your score',
