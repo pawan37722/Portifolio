@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Coding Assistant | Pawan Kumar</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --border: #272b35;
+      --text: #e8eaee;
+      --muted: #9aa1ae;
+      --accent: #6ea8fe;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7f9;
+        --surface: #ffffff;
+        --border: #dde0e6;
+        --text: #15171c;
+        --muted: #5b6270;
+        --accent: #1d5fd1;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 24px 16px 64px;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Row 1: go back */
+    .top-bar { margin-bottom: 20px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Row 2: GitHub + Demo */
+    .link-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .btn--primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+    }
+    .btn--primary:hover { color: var(--bg); opacity: 0.9; }
+
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .summary {
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 62ch;
+    }
+
+    /* Why I made this */
+    .why {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 20px 22px;
+    }
+    .why h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .why p { max-width: 62ch; }
+    .why p + p { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- Row 1 -->
+    <div class="top-bar">
+      <a class="btn" href="https://thepawankumar.vercel.app/#projects">&larr; Go back</a>
+    </div>
+
+    <!-- Row 2: delete the Demo link if this project has no demo -->
+    <div class="link-bar">
+      <a class="btn btn--primary" href="https://github.com/pawan37722/AI-Based-Student-Performance-Tracker-Ranking-System" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="https://your-demo-link.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+    </div>
+
+    <h1>Memory capbility Testing</h1>
+    <p class="summary">
+      chech you remembering capability by playing a simple game and get your score
+    </p>
+
+    <!-- Why I made this -->
+    <div class="why">
+      <h2>Why I made this</h2>
+      <ul>
+  <li>A memory-testing web game where the player clicks on images to score points.</li>
+  <li>Each new image clicked increases the score by one.</li>
+  <li>If the player clicks the same image twice, the game ends and the score becomes final.</li>
+  <li>Images are reshuffled after every click, so the player has to remember which ones were already chosen.</li>
+  <li>Goal: improve memory and concentration through a simple, engaging game.</li>
+  <li>Tech stack: React, JavaScript, HTML, CSS.</li>
+      </ul>
+    </div>
+
+  </main>
+</body>
+</html>

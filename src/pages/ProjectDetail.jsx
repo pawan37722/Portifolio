@@ -2,12 +2,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { projects } from '../data/portfolioData'
 import { GithubIcon, ExternalIcon, ArrowLeftIcon } from '../assets/icons'
 
-/**
- * ProjectDetail — reached by clicking any project card on Home.
- *
- * GitHub and Live Demo buttons are REAL <a> links here.
- * Replace the placeholder <div> below with your own project content.
- */
 export default function ProjectDetail() {
   const { id }   = useParams()
   const navigate = useNavigate()
@@ -42,14 +36,36 @@ export default function ProjectDetail() {
         <h1 className="project-page__title">{project.title}</h1>
         <p className="project-page__desc">{project.desc}</p>
 
-        {/* Tech stack */}
-        <div className="project-page__tech">
-          {project.tech.map(t => (
-            <span key={t} className="tag">{t}</span>
-          ))}
-        </div>
+        {/* ─── Tech stack (written out per project) ─── */}
+        {project.id === 1 && (
+          <div className="project-page__tech">
+            <span className="tag">{project.tech[0]}</span>
+            <span className="tag">{project.tech[1]}</span>
+            <span className="tag">{project.tech[2]}</span>
+          </div>
+        )}
+        {project.id === 2 && (
+          <div className="project-page__tech">
+            <span className="tag">{project.tech[0]}</span>
+            <span className="tag">{project.tech[1]}</span>
+            <span className="tag">{project.tech[2]}</span>
+          </div>
+        )}
+        {project.id === 3 && (
+          <div className="project-page__tech">
+            <span className="tag">{project.tech[0]}</span>
+            <span className="tag">{project.tech[1]}</span>
+            <span className="tag">{project.tech[2]}</span>
+          </div>
+        )}
+        {project.id === 4 && (
+          <div className="project-page__tech">
+            <span className="tag">{project.tech[0]}</span>
+            <span className="tag">{project.tech[1]}</span>
+          </div>
+        )}
 
-        {/* ✅ REAL buttons — only on this page */}
+        {/* REAL buttons — only on this page */}
         <div className="project-page__actions">
           <a
             href={project.github}
@@ -69,21 +85,69 @@ export default function ProjectDetail() {
           </a>
         </div>
 
-        {/* ─────────────────────────────────────────────────────────────────── */}
-        {/* 👇 Replace this placeholder block with your own project content    */}
-        {/* ─────────────────────────────────────────────────────────────────── */}
-        <div className="project-page__placeholder">
-          <div className="project-page__placeholder-icon">🚧</div>
-          <div className="project-page__placeholder-title">
-            Your content goes here — Project {project.id}
+        {/* ─────────────── Project 1 content ─────────────── */}
+        {project.id === 1 && (
+          <div className="project-page__content">
+            <h3>Overview</h3>
+            <p>Write the overview of project 1 here.</p>
+            <h3>Features</h3>
+            <ul>
+              <li>Feature one</li>
+              <li>Feature two</li>
+              <li>Feature three</li>
+            </ul>
+            <h3>Challenges</h3>
+            <p>What problems you solved in project 1.</p>
           </div>
-          <p className="project-page__placeholder-text">
-            Add screenshots, videos, feature breakdowns, challenges you solved,
-            or anything you want to showcase about{' '}
-            <strong style={{ color: 'var(--accent2)' }}>{project.title}</strong>.
-          </p>
-        </div>
-        {/* ─────────────────────────────────────────────────────────────────── */}
+        )}
+
+        {/* ─────────────── Project 2 content ─────────────── */}
+        {project.id === 2 && (
+          <div className="project-page__content">
+            <h3>Overview</h3>
+            <p>Write the overview of project 2 here.</p>
+            <h3>Features</h3>
+            <ul>
+              <li>Feature one</li>
+              <li>Feature two</li>
+              <li>Feature three</li>
+            </ul>
+            <h3>Challenges</h3>
+            <p>What problems you solved in project 2.</p>
+          </div>
+        )}
+
+        {/* ─────────────── Project 3 content ─────────────── */}
+        {project.id === 3 && (
+          <div className="project-page__content">
+            <h3>Overview</h3>
+            <p>Write the overview of project 3 here.</p>
+            <h3>Features</h3>
+            <ul>
+              <li>Feature one</li>
+              <li>Feature two</li>
+              <li>Feature three</li>
+            </ul>
+            <h3>Challenges</h3>
+            <p>What problems you solved in project 3.</p>
+          </div>
+        )}
+
+        {/* ─────────────── Project 4 content ─────────────── */}
+        {project.id === 4 && (
+          <div className="project-page__content">
+            <h3>Overview</h3>
+            <p>Write the overview of project 4 here.</p>
+            <h3>Features</h3>
+            <ul>
+              <li>Feature one</li>
+              <li>Feature two</li>
+              <li>Feature three</li>
+            </ul>
+            <h3>Challenges</h3>
+            <p>What problems you solved in project 4.</p>
+          </div>
+        )}
 
       </div>
     </div>

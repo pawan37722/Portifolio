@@ -14,17 +14,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <hr className="divider" />
       <About />
-      <hr className="divider" />
       <Skills />
-      <hr className="divider" />
       <Projects />
-      <hr className="divider" />
       <Awards />
-      <hr className="divider" />
       <LeetCode />
-      <hr className="divider" />
       <Contact />
       <Footer />
     </>

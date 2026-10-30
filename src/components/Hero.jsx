@@ -1,9 +1,22 @@
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { profile, social } from '../data/portfolioData'
 import { GithubIcon, LinkedInIcon, LeetcodeIcon } from '../assets/icons'
 
 export default function Hero() {
   const navigate = useNavigate()
+  const [zoomed, setZoomed] = useState(false)
+
+  useEffect(() => {
+    if (!zoomed) return
+    const onKey = (e) => e.key === 'Escape' && setZoomed(false)
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [zoomed])
 
   const scrollTo = (id) => {
     const el = document.getElementById(id)
@@ -16,7 +29,14 @@ export default function Hero() {
 
       <div className="hero__inner">
         {/* Avatar */}
-        <div className="hero__avatar-ring">
+        <div
+          className="hero__avatar-ring"
+          onClick={() => setZoomed(true)}
+          role="button"
+          tabIndex={0}
+          aria-label="View profile photo larger"
+          onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setZoomed(true)}
+        >
           <img
             src={profile.photo}
             alt={profile.name}
@@ -61,6 +81,13 @@ export default function Hero() {
           </button>
         </div>
       </div>
+
+      {zoomed && (
+        <div className="avatar-modal" onClick={() => setZoomed(false)}>
+          <button type="button" className="avatar-modal__close" aria-label="Close photo">×</button>
+          <img src={profile.photo} alt={profile.name} className="avatar-modal__img" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
     </section>
   )
 }

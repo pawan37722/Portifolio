@@ -51,9 +51,10 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 /* ── Utility ─────────────────────────────────────────────────────────────── */
 .section-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem 1rem;
 }
 
 .section-label {
@@ -71,14 +72,14 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .divider {
   border: none;
   border-top: 1px solid var(--border);
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
@@ -133,4 +134,31 @@ button { font-family: var(--font-body); cursor: pointer; }
   color: var(--tag-text);
   font-size: 0.74rem;
   font-weight: 500;
+}
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card__header {
+  display: flex;
+  flex-wrap: wrap;      /* badges wrap instead of squeezing the title */
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: normal;  /* no truncation */
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.fake-btn {
+  cursor: inherit;
+  pointer-events: none; /* purely visual */
 }

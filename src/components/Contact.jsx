@@ -1,6 +1,23 @@
+// 
+
+
+
+
+
+
+
+
 import { profile, social } from '../data/portfolioData'
 
 export default function Contact() {
+  const whatsappMessage = encodeURIComponent(
+    `Hi ${profile.name}, I found your portfolio and wanted to say hello!`
+  )
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    profile.email
+  )}`
+
   return (
     <section id="contact">
       <div className="section-wrapper">
@@ -14,9 +31,28 @@ export default function Contact() {
           </p>
 
           <div className="contact-card__actions">
-            <a href={`mailto:${profile.email}`} className="btn-primary">
+
+            {/* Gmail */}
+            <a
+              href={gmailUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline"
+            >
               Send Email
             </a>
+
+            {/* WhatsApp */}
+            <a
+              href={`https://wa.me/919523307039?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline"
+            >
+              Say Hi on WhatsApp
+            </a>
+
+            {/* LinkedIn */}
             <a
               href={social.linkedin}
               target="_blank"
@@ -25,6 +61,7 @@ export default function Contact() {
             >
               LinkedIn
             </a>
+
           </div>
         </div>
       </div>

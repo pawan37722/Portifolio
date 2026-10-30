@@ -35,16 +35,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        {/* Stats */}
-        <div className="stats-row">
-          {STATS.map(({ num, label }) => (
-            <div key={label} className="stat-card">
-              <div className="stat-card__num">{num}</div>
-              <div className="stat-card__label">{label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
